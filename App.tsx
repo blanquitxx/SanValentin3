@@ -43,7 +43,14 @@ const App: React.FC = () => {
           </div>
           
           <button 
-            onClick={handleStart}
+            onClick={() => {
+              handleStart();
+              if (audioRef.current) {
+                audioRef.current.play().catch(e => {
+                  console.warn("La reproducción automática de audio fue bloqueada por el navegador.", e);
+                });
+              }
+            }}
             className="group relative px-10 py-5 bg-white text-[#ff4e73] font-bold text-xl rounded-full shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:scale-110 hover:shadow-white/20 transition-all duration-300 active:scale-95 overflow-hidden"
           >
             <span className="relative z-10">Haz clic para empezar 💖</span>
