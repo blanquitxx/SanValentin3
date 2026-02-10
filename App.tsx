@@ -11,7 +11,7 @@ const App: React.FC = () => {
     setIsStarted(true);
     if (audioRef.current) {
       audioRef.current.volume = 0.5;
-      audioRef.current.src = './musica.mp3'; // Update the audio source to musica.mp3
+      audioRef.current.src = "./musica.mp3"; // Update the audio source to musica.mp3
       audioRef.current.play().catch(e => {
         console.warn("La reproducción automática de audio fue bloqueada por el navegador.", e);
       });
