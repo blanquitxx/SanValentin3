@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import HeartBackground from './components/HeartBackground';
 import Envelope from './components/Envelope';
 
@@ -7,11 +7,15 @@ const App: React.FC = () => {
   const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.5;
+    }
+  }, []);
+
   const handleStart = () => {
     setIsStarted(true);
     if (audioRef.current) {
-      audioRef.current.volume = 0.5;
-      audioRef.current.src = "./musica.mp3"; // Update the audio source to musica.mp3
       audioRef.current.play().catch(e => {
         console.warn("La reproducción automática de audio fue bloqueada por el navegador.", e);
       });
@@ -28,7 +32,7 @@ const App: React.FC = () => {
       <HeartBackground />
 
       <audio ref={audioRef} loop preload="auto">
-        <source src="/musica.mp3" type="audio/mpeg" />
+        <source src="musica.mp3" type="audio/mpeg" />
       </audio>
 
       {!isStarted ? (
@@ -43,14 +47,7 @@ const App: React.FC = () => {
           </div>
           
           <button 
-            onClick={() => {
-              handleStart();
-              if (audioRef.current) {
-                audioRef.current.play().catch(e => {
-                  console.warn("La reproducción automática de audio fue bloqueada por el navegador.", e);
-                });
-              }
-            }}
+            onClick={handleStart}
             className="group relative px-10 py-5 bg-white text-[#ff4e73] font-bold text-xl rounded-full shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:scale-110 hover:shadow-white/20 transition-all duration-300 active:scale-95 overflow-hidden"
           >
             <span className="relative z-10">Haz clic para empezar 💖</span>
