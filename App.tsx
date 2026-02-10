@@ -28,7 +28,7 @@ const App: React.FC = () => {
       <HeartBackground />
 
       <audio ref={audioRef} loop preload="auto">
-        <source src="./musica.mp3" type="audio/mpeg" />
+        <source src="/musica.mp3" type="audio/mpeg" />
       </audio>
 
       {!isStarted ? (
