@@ -23,11 +23,12 @@ const Envelope: React.FC<EnvelopeProps> = ({ isOpen, onOpen }) => {
       >
         <h2 className="text-[#ff4e73] font-bold text-lg sm:text-xl mb-2 sm:mb-4">Para mi amor 💖</h2>
         <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">
-          Desde que llegaste a mi vida todo cambió. 
-          Gracias por tu amor, tu paciencia y tu forma tan hermosa de existir. 
-          No hay día en que no agradezca tenerte conmigo.
+          Puede Sonar Cursi pero no puedo evitar decirlo: 
+          Eres lo más bonito que me ha pasado. 
+          Cada día contigo es un regalo que atesoro profundamente. 
+          Gracias por ser mi compañera, mi amiga y mi amor. 
         </p>
-        <p className="text-[#ff4e73] font-bold mt-2 sm:mt-4 text-sm sm:text-base">Te amo infinitamente ❤️</p>
+        <p className="text-[#ff4e73] font-bold mt-2 sm:mt-4 text-sm sm:text-base">Te amo ❤️</p>
       </div>
 
       {/* Front Sides of Envelope (Closes the gap) */}

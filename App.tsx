@@ -16,7 +16,7 @@ const App: React.FC = () => {
   const handleStart = () => {
     setIsStarted(true);
     if (audioRef.current) {
-      audioRef.current.play().catch(e => {
+            audioRef.current.play().catch(e => {
         console.warn("La reproducción automática de audio fue bloqueada por el navegador.", e);
       });
     }
@@ -39,7 +39,7 @@ const App: React.FC = () => {
         <div className="text-center z-20 animate-fade-in space-y-8 max-w-md px-4">
           <div className="space-y-4">
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
-              Para ti, mi amor ❤️
+              Un Dia Menos para verte mi amor ❤️
             </h1>
             <p className="text-xl sm:text-2xl text-white/95 italic drop-shadow-md">
               Eres lo más bonito que me ha pasado
