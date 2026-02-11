@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import HeartBackground from './components/HeartBackground';
 import Envelope from './components/Envelope';
-import ReactPlayer from 'react-player';
 
 const App: React.FC = () => {
   const [isStarted, setIsStarted] = useState(false);
@@ -20,18 +19,19 @@ const App: React.FC = () => {
     <div className="relative min-h-screen flex flex-col items-center justify-center p-6 sm:p-12 overflow-hidden font-sans">
       <HeartBackground />
 
-      {/* YouTube Player */}
-      <div className="absolute top-0 left-0 w-0 h-0 overflow-hidden">
-        <ReactPlayer
-          url="https://www.youtube.com/watch?v=DZ-MgHvLMS0"
-          playing={isStarted}
-          loop={true}
-          controls={false}
+      {/* YouTube Player - Hidden */}
+      {isStarted && (
+        <iframe
           width="0"
           height="0"
-          volume={0.5}
-        />
-      </div>
+          src="https://www.youtube.com/embed/DZ-MgHvLMS0?autoplay=1&loop=1&playlist=DZ-MgHvLMS0"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen={true}
+          title="Background Music"
+          style={{ display: 'none' }}
+        ></iframe>
+      )}
 
       {!isStarted ? (
         <div className="text-center z-20 animate-fade-in space-y-8 max-w-md px-4">
