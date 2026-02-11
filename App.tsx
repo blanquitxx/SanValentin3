@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import HeartBackground from './components/HeartBackground';
 import Envelope from './components/Envelope';
+import audioFile from './quelinda.mp3?url';
 
 const App: React.FC = () => {
   const [isStarted, setIsStarted] = useState(false);
@@ -32,7 +33,7 @@ const App: React.FC = () => {
       <HeartBackground />
 
       <audio ref={audioRef} loop preload="auto">
-        <source src="/SanValentin3/quelinda.mp3" type="audio/mpeg" />
+        <source src={audioFile} type="audio/mpeg" />
       </audio>
 
       {!isStarted ? (
