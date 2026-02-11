@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import HeartBackground from './components/HeartBackground';
 import Envelope from './components/Envelope';
-import ReactPlayer from 'react-player/youtube';
+import ReactPlayer from 'react-player';
 
 const App: React.FC = () => {
   const [isStarted, setIsStarted] = useState(false);
