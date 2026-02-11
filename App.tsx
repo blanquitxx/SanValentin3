@@ -1,26 +1,12 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import HeartBackground from './components/HeartBackground';
 import Envelope from './components/Envelope';
-import audioFile from './quelinda.mp3?url';
+import ReactPlayer from 'react-player/youtube';
 
 const App: React.FC = () => {
   const [isStarted, setIsStarted] = useState(false);
   const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = 0.5;
-    }
-  }, []);
-
-  const handleStart = () => {
-    setIsStarted(true);
-    if (audioRef.current) {
-            audioRef.current.play().catch(e => {
-        console.warn("La reproducción automática de audio fue bloqueada por el navegador.", e);
-      });
-    }
   };
 
   const handleOpenEnvelope = () => {
@@ -46,9 +32,18 @@ const App: React.FC = () => {
               Eres lo más bonito que me ha pasado
             </p>
           </div>
-          
-          <button 
-            onClick={handleStart}
+      {/* YouTube Player */}
+      <div className="absolute top-0 left-0 w-0 h-0 overflow-hidden">
+        <ReactPlayer
+          url="https://www.youtube.com/watch?v=DZ-MgHvLMS0"
+          playing={isStarted}
+          loop={true}
+          controls={false}
+          width="0"
+          height="0"
+          volume={0.5}
+        />
+      </divnClick={handleStart}
             className="group relative px-10 py-5 bg-white text-[#ff4e73] font-bold text-xl rounded-full shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:scale-110 hover:shadow-white/20 transition-all duration-300 active:scale-95 overflow-hidden"
           >
             <span className="relative z-10">Haz clic para empezar 💖</span>
