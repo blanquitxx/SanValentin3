@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { Heart } from '../types';
 
@@ -9,7 +8,7 @@ const HeartBackground: React.FC = () => {
     const newHeart: Heart = {
       id: Date.now() + Math.random(),
       left: `${Math.random() * 100}vw`,
-      size: `${Math.random() * 20 + 10}px`,
+      size: `${Math.random() * 40 + 20}px`,
       duration: `${Math.random() * 3 + 4}s`,
       delay: `0s`,
     };
@@ -26,8 +25,8 @@ const HeartBackground: React.FC = () => {
       <style>
         {`
           @keyframes float {
-            0% { transform: translateY(110vh); opacity: 1; }
-            100% { transform: translateY(-10vh); opacity: 0; }
+            0% { transform: translateY(110vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
           }
         `}
       </style>
