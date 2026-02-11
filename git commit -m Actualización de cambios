@@ -1,0 +1,173 @@
+[33mcommit 244ee3a3430801fc038c5657ce9a321e3db58d3d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Wed Feb 11 17:52:12 2026 +0000
+
+    Added romantic effects to text and button, including animated hearts on button click
+
+[33mcommit 7c795c7851b4a0494efe66a79874c194cac32a68[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Wed Feb 11 00:41:02 2026 +0000
+
+    Switch back to local audio file with proper Vite import
+
+[33mcommit 4dd6969f06915ad36054615aba2b34e1ed066688[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Wed Feb 11 00:37:14 2026 +0000
+
+    Fix ReactPlayer TypeScript error - use YouTube iframe instead
+
+[33mcommit 888e7a263d7487c41580a3051e96f1b96bfe4c85[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Wed Feb 11 00:34:12 2026 +0000
+
+    Fix import statement for react-player
+
+[33mcommit 7bd47d148fb0a7fe1fa8fb7c99f8d78649584baa[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Wed Feb 11 00:33:22 2026 +0000
+
+    Fix App.tsx - use YouTube video with react-player
+
+[33mcommit bf13c1c79989c07d26b8643a244397cfaa0dfc96[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Wed Feb 11 00:32:23 2026 +0000
+
+    Replace local audio with YouTube video using react-player
+
+[33mcommit 83cda77ab9d9f6a01bb3d7f537f050f2faabd1b8[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Wed Feb 11 00:27:34 2026 +0000
+
+    Add TypeScript declarations for audio files with Vite
+
+[33mcommit 65013c9eddcc6d63d7fe5531c0b3a3fb7bf1937d[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Wed Feb 11 00:24:57 2026 +0000
+
+    Import audio file properly as Vite asset for correct path resolution
+
+[33mcommit c59add30093d4ed3603931bfcfa2eca6d3da7e6c[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Wed Feb 11 00:20:16 2026 +0000
+
+    Fix audio path to work with GitHub Pages base configuration
+
+[33mcommit 99b283fd016e64a3299b271607f2af2e66017ee2[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Wed Feb 11 00:11:11 2026 +0000
+
+    Change audio source from musica.mp3 to quelinda.mp3
+
+[33mcommit 35fa3bf1e14bab13bb0dc0bc2351bcfa130b2946[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Wed Feb 11 00:08:40 2026 +0000
+
+    Remove duplicate audio element from index.html to fix double playback
+
+[33mcommit e3279ebdc8c0ff1c2804d2e0bef1e59696a16296[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Wed Feb 11 00:04:38 2026 +0000
+
+    Update App.tsx
+
+[33mcommit 06bfa3b8418cf4bdfedcbde7657466fe43db8d51[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Wed Feb 11 00:00:25 2026 +0000
+
+    Remove React.StrictMode to fix audio playback issue
+
+[33mcommit 14411baacb78f48e3c425937714336650d44e792[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Tue Feb 10 23:51:24 2026 +0000
+
+    Update music file
+
+[33mcommit f46dd24d1e34d5d359efefc061f7ed14f83e98e3[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Tue Feb 10 20:45:54 2026 -0300
+
+    Delete .github/workflows/jekyll-gh-pages.yml
+
+[33mcommit 7a6e30781ef3393cbd758f7b7a6b00f1801a044b[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Tue Feb 10 20:42:16 2026 -0300
+
+    Create jekyll-gh-pages.yml
+
+[33mcommit 6aef177c52e85bd07ac787d4ce12156ffefeec23[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Tue Feb 10 19:24:35 2026 +0000
+
+    Fix audio playback issue and ensure music plays correctly
+
+[33mcommit fb4a0ba0f8544913f1ef6d3bd9f08d3948b2d38d[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Tue Feb 10 18:02:40 2026 +0000
+
+    Fix audio playback issue and ensure music plays correctly
+
+[33mcommit 58924a4015c8222023d3ab89c463a80ff36d829a[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Tue Feb 10 17:36:24 2026 +0000
+
+    Updated button to play music on click
+
+[33mcommit d909f717bcdbf1a81351ea078984b24b92ea6718[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Tue Feb 10 17:12:11 2026 +0000
+
+    Ensure musica.mp3 plays on button click
+
+[33mcommit 189e7de04471331e9b7d92b68a950ae2a9f5fe12[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Tue Feb 10 17:10:53 2026 +0000
+
+    Ensure musica.mp3 plays on button click
+
+[33mcommit deaf8646c0ce139f30d2206d823f9eddffcc2a94[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Tue Feb 10 17:09:03 2026 +0000
+
+    Ensure musica.mp3 plays on button click
+
+[33mcommit b6d49520819ad4bfce3845828bb7f6ccb385fc59[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Tue Feb 10 17:03:14 2026 +0000
+
+    Updated handleStart to play musica.mp3 on button click
+
+[33mcommit c969980fdc8e7939343aff6d61a2989389b91391[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Tue Feb 10 16:51:50 2026 +0000
+
+    Add audio element for background music and other updates
+
+[33mcommit decd7e52c67c67c51ff0cb5d723be71e0fc20b00[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Tue Feb 10 13:48:56 2026 -0300
+
+    Add files via upload
+
+[33mcommit 78dfc51b67f2b122d8a2eea96b9cdf3f039981d4[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Tue Feb 10 13:30:21 2026 -0300
+
+    Create jekyll-docker.yml
+
+[33mcommit 13d626bf7a9264425952a459098f2c3d2c1f5b66[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Tue Feb 10 13:25:30 2026 -0300
+
+    Rename eploy.yml to .github/workflows/deploy.yml
+
+[33mcommit 8e89606a8d6112ea05d601d90b3181fc06b3742c[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Tue Feb 10 13:24:34 2026 -0300
+
+    Create eploy.yml
+
+[33mcommit 895de8574f872c6d7e7bf5c5d743ea5f35849f1b[m
+Author: blanquitxx <blanquitx@gmail.com>
+Date:   Tue Feb 10 13:16:46 2026 -0300
+
+    Add files via upload
