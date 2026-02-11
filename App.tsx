@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import HeartBackground from './components/HeartBackground';
 import Envelope from './components/Envelope';
+import musicFile from './quelinda.mp3?url';
 
 const App: React.FC = () => {
   const [isStarted, setIsStarted] = useState(false);
   const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    if (isStarted && audioRef.current) {
+      audioRef.current.play().catch(e => {
+        console.warn("No se pudo reproducir el audio:", e);
+      });
+    }
+  }, [isStarted]);
 
   const handleStart = () => {
     setIsStarted(true);
@@ -19,19 +29,15 @@ const App: React.FC = () => {
     <div className="relative min-h-screen flex flex-col items-center justify-center p-6 sm:p-12 overflow-hidden font-sans">
       <HeartBackground />
 
-      {/* YouTube Player - Hidden */}
-      {isStarted && (
-        <iframe
-          width="0"
-          height="0"
-          src="https://www.youtube.com/embed/DZ-MgHvLMS0?autoplay=1&loop=1&playlist=DZ-MgHvLMS0"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen={true}
-          title="Background Music"
-          style={{ display: 'none' }}
-        ></iframe>
-      )}
+      {/* Audio Player */}
+      <audio 
+        ref={audioRef}
+        loop
+        preload="auto"
+      >
+        <source src={musicFile} type="audio/mpeg" />
+        Tu navegador no soporta reproducción de audio.
+      </audio>
 
       {!isStarted ? (
         <div className="text-center z-20 animate-fade-in space-y-8 max-w-md px-4">
