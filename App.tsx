@@ -7,6 +7,8 @@ const App: React.FC = () => {
   const [isStarted, setIsStarted] = useState(false);
   const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false);
 
+  const handleStart = () => {
+    setIsStarted(true);
   };
 
   const handleOpenEnvelope = () => {
@@ -18,20 +20,6 @@ const App: React.FC = () => {
     <div className="relative min-h-screen flex flex-col items-center justify-center p-6 sm:p-12 overflow-hidden font-sans">
       <HeartBackground />
 
-      <audio ref={audioRef} loop preload="auto">
-        <source src={audioFile} type="audio/mpeg" />
-      </audio>
-
-      {!isStarted ? (
-        <div className="text-center z-20 animate-fade-in space-y-8 max-w-md px-4">
-          <div className="space-y-4">
-            <h1 className="text-4xl sm:text-6xl font-extrabold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
-              Un Dia Menos para verte mi amor ❤️
-            </h1>
-            <p className="text-xl sm:text-2xl text-white/95 italic drop-shadow-md">
-              Eres lo más bonito que me ha pasado
-            </p>
-          </div>
       {/* YouTube Player */}
       <div className="absolute top-0 left-0 w-0 h-0 overflow-hidden">
         <ReactPlayer
@@ -43,7 +31,21 @@ const App: React.FC = () => {
           height="0"
           volume={0.5}
         />
-      </divnClick={handleStart}
+      </div>
+
+      {!isStarted ? (
+        <div className="text-center z-20 animate-fade-in space-y-8 max-w-md px-4">
+          <div className="space-y-4">
+            <h1 className="text-4xl sm:text-6xl font-extrabold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
+              Un Dia Menos para verte mi amor ❤️
+            </h1>
+            <p className="text-xl sm:text-2xl text-white/95 italic drop-shadow-md">
+              Eres lo más bonito que me ha pasado
+            </p>
+          </div>
+          
+          <button 
+            onClick={handleStart}
             className="group relative px-10 py-5 bg-white text-[#ff4e73] font-bold text-xl rounded-full shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:scale-110 hover:shadow-white/20 transition-all duration-300 active:scale-95 overflow-hidden"
           >
             <span className="relative z-10">Haz clic para empezar 💖</span>
